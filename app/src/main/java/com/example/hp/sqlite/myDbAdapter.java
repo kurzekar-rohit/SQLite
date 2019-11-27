@@ -18,11 +18,12 @@ public class myDbAdapter {
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(myDbHelper.NAME, name);
+//        contentValues.put(myDbHelper.NAME, name);
         contentValues.put(myDbHelper.MyPASSWORD, pass);
         long id = dbb.insert(myDbHelper.TABLE_NAME, null , contentValues);
         return id;
     }
- 
+
     public String getData()
     {
         SQLiteDatabase db = myhelper.getWritableDatabase();
